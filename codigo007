@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdio.h>
+
+int main()
+{
+    float nota1,nota2,nota3;
+    scanf("%f%f%f",&nota1,&nota2,&nota3);
+    float media = (nota1 + nota2 + nota3) / 3;
+    if (media >= 7){
+        printf("aprovado\n");
+    }
+    else{
+        printf("reprovado\n");
+    }
+    return 0;
+    
+}
