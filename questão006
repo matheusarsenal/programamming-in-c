@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdio.h>
+
+int main()
+{
+    int nunber;
+    printf("digite um numero :");
+    scanf("%d",&nunber);
+    if (nunber % 2 == 1){
+        printf("o numero e impar\n");
+    }
+    else{
+        printf("numero e par\n");
+    }
+    return 0;
+    
+}
