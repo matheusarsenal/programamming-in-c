@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    char caractere;
+
+    scanf("%c", &caractere);
+
+    if (caractere == 'a' || caractere == 'e' || caractere == 'i' || caractere == 'o' || caractere == 'u') {
+        printf("%c é uma vogal.\n", caractere);
+    }
+
+    else if (caractere == 'A' || caractere == 'E' || caractere == 'I' || caractere == 'O' || caractere == 'U') {
+        printf("é uma vogal\n");
+    }
+    else {
+        printf("e uma consoante\n");
+    }
+
+    return 0;
+}
