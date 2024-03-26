@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+
+int fibo(int nunber)
+{
+    if (nunber == 0){
+        return 0;
+    }
+    else if (nunber == 1){
+        return 1;
+    }
+    else{
+        return fibo(nunber - 1) + fibo(nunber - 2);
+    }
+    
+    
+}
+
+
+
+int main()
+{
+    int nunber;
+    scanf("%d",&nunber);
+    
+    int resultado = fibo(nunber);
+    printf("%d",resultado);
+    return 0;
+}
+
