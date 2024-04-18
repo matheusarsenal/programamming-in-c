@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int matriz[3][3];
+    int resultado[3][3];
+    int i, j;
+
+    printf("digite os numeros da matriz\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            resultado[i][j] = matriz[i][j] * 2;
+        }
+    }
+
+    printf("O dobro é:\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("%d ", resultado[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
