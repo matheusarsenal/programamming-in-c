@@ -11,7 +11,7 @@ int main()
         printf("os numeros são iguais");
     } 
     else{
-        printf("numero 2 e o maiorm\n");
+        printf("numero 2 e o maior\n");
     }
     return 0;
     
