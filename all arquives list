@@ -1,0 +1,79 @@
+
+
+
+
+
+//codigo 2
+#include <stdio.h>
+#include <stdlib.h>
+
+int contar_linhas_arquivo(const char *caminho_arquivo) {
+    FILE *arquivo = fopen(caminho_arquivo, "r");
+    if (arquivo == NULL) {
+        printf("Erro.\n");
+        return -1;
+    }
+
+    int linhas = 0;
+    char caractere;
+
+    while ((caractere = fgetc(arquivo)) != EOF) {
+        if (caractere == '\n') {
+            linhas++;
+        }
+    }
+
+    fclose(arquivo);
+    return linhas;
+}
+
+int main() {
+    char caminho_arquivo[100];
+
+    printf("insira o caminho do arquivo de texto: ");
+    scanf("%99s", caminho_arquivo);
+
+    int numero_de_linhas = contar_linhas_arquivo(caminho_arquivo);
+
+    if (numero_de_linhas != -1) {
+        printf("O arquivo possui %d linhas.\n", numero_de_linhas);
+    }
+
+    return 0;
+}
+
+// codigo 3
+
+
+#include <stdio.h>
+
+int main() {
+    char filename[100], ch;
+    FILE *file;
+    int count = 0;
+    char c;
+
+    printf("Digite o nome do arquivo: ");
+    scanf("%s", filename);
+
+    printf("Digite a letra a ser contada: ");
+    scanf(" %c", &ch);
+
+    file = fopen(filename, "r");
+    if (file == NULL) {
+        printf("error %s\n", filename);
+        return 1;
+    }
+
+    while ((c = fgetc(file)) != EOF) {
+        if (c == ch) {
+            count++;
+        }
+    }
+    fclose(file);
+
+    printf("O caractere '%c' aparece %d vezes no arquivo %s\n", ch, count, filename);
+
+    return 0;
+}
+
